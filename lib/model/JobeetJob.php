@@ -29,4 +29,10 @@ class JobeetJob extends BaseJobeetJob {
 		parent::__construct();
 	}
 
+    public function __toString()
+    {
+        return sprintf('%s at %s（%s）', $this->getPosition(),
+            $this->getCompany(), $this->getLocation());
+    }
+
 } // JobeetJob

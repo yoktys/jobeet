@@ -29,4 +29,8 @@ class JobeetAffiliate extends BaseJobeetAffiliate {
 		parent::__construct();
 	}
 
+    public function __toString()
+    {
+        return $this->getUrl();
+    }
 } // JobeetAffiliate
