@@ -406,7 +406,12 @@ class sfWebResponse extends sfResponse
    */
   protected function normalizeHeaderName($name)
   {
-    return preg_replace('/\-(.)/e', "'-'.strtoupper('\\1')", strtr(ucfirst(strtolower($name)), '_', '-'));
+    // Deprecated: preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/project/jobeet/vendor/symfony-1.4.20/lib/response/sfWebResponse.class.php on line 409
+    // note: http://stackoverflow.com/questions/18077276/symfony-1-4-using-deprecated-functions-in-php-5-4
+    $callback = function($matches) {
+        return '-'.strtoupper($matches[1]);
+    };
+    return preg_replace_callback('/\-(.)/', $callback, strtr(ucfirst(strtolower($name)), '_', '-'));
   }
 
   /**
