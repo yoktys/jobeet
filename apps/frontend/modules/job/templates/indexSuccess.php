@@ -25,7 +25,30 @@
   <tbody>
     <?php foreach ($JobeetJobs as $JobeetJob): ?>
     <tr>
-      <td><a href="<?php echo url_for('job/show?id='.$JobeetJob->getId()) ?>"><?php echo $JobeetJob->getId() ?></a></td>
+      <td>
+            <a href="<?php echo url_for('job/show?id='.$JobeetJob->getId()) ?>">
+                <?php echo $JobeetJob->getId() ?>
+            </a>
+            <br />
+            <a href="<?php echo url_for([
+                'module'   => 'job',
+                'action'   => 'show',
+                'id'       => $JobeetJob->getId(),
+                'company'  => $JobeetJob->getCompany(),
+                'location' => $JobeetJob->getLocation(),
+                'position' => $JobeetJob->getPosition(),
+            ]) ?>">
+                <?php echo $JobeetJob->getId() ?>
+            </a>
+            <br />
+            <a href="<?php echo url_for([
+                'sf_route' => 'job_show_user',
+                'sf_subject' => $JobeetJob,
+            ]) ?>">
+                <?php echo $JobeetJob->getId() ?>
+            </a>
+
+      </td>
       <td><?php echo $JobeetJob->getCategoryId() ?></td>
       <td><?php echo $JobeetJob->getType() ?></td>
       <td><?php echo $JobeetJob->getCompany() ?></td>

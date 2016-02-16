@@ -1,0 +1,5 @@
+indexSuccess:
+  stylesheets:  [main.css]
+
+showSuccess:
+  stylesheets: [job.css]

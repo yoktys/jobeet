@@ -35,4 +35,18 @@ class JobeetJob extends BaseJobeetJob {
             $this->getCompany(), $this->getLocation());
     }
 
+    public function getCompanySlug()
+    {
+        return Jobeet::slugify($this->getCompany());
+    }
+
+    public function getPositionSlug()
+    {
+        return Jobeet::slugify($this->getPosition());
+    }
+
+    public function getLocationSlug()
+    {
+        return Jobeet::slugify($this->getLocation());
+    }
 } // JobeetJob
