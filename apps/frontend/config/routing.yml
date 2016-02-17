@@ -23,9 +23,9 @@ job_show_user:
 #
 
 # default rules
-#homepage:
-#  url:   /
-#  param: { module: job, action: index }
+homepage:
+  url:   /
+  param: { module: job, action: index }
 
 # generic rules
 # please, remove them by adding more specific rules

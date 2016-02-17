@@ -12,7 +12,7 @@ all:
     class: sfPropelDatabase
     param:
       classname: PropelPDO
-      dsn: 'pgsql:host=192.168.90.10;dbname=jobeet'
+      dsn: 'pgsql:host=192.168.33.10;dbname=jobeet'
       username: postgres
       password: iloverandompasswordsbutthiswilldo
       encoding: utf8
