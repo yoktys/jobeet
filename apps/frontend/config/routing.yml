@@ -42,5 +42,5 @@ homepage:
 category:
   url: /category/:slug
   class: sfPropelRoute
-  param: { module: category, acrion: show }
+  param: { module: category, action: show }
   options: { model: JobeetCategory, type: object }
