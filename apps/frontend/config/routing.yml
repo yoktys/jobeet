@@ -38,3 +38,9 @@ homepage:
 
 #default:
 #  url:   /:module/:action/*
+
+category:
+  url: /category/:slug
+  class: sfPropelRoute
+  param: { module: category, acrion: show }
+  options: { model: JobeetCategory, type: object }
