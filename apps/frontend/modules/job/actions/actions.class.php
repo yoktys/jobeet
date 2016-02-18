@@ -17,7 +17,9 @@ class jobActions extends sfActions
     //$criteria->add(JobeetJobPeer::EXPIRES_AT, time(), Criteria::GREATER_THAN);
     //$this->JobeetJobs = JobeetJobPeer::doSelect($criteria);
 
-    $this->jobeet_jobs = JobeetJobPeer::getActiveJobs();
+    //$this->jobeet_jobs = JobeetJobPeer::getActiveJobs();
+
+    $this->categories = JobeetCategoryPeer::getWithJobs();
   }
 
   public function executeShow(sfWebRequest $request)
