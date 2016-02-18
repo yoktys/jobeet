@@ -11,13 +11,19 @@ class jobActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->JobeetJobs = JobeetJobPeer::doSelect(new Criteria());
+    //$criteria->add(JobeetJobPeer::CREATED_AT, time() - 86400 * 30, Criteria::GREATER_THAN);
+
+    //$criteria = new Criteria();
+    //$criteria->add(JobeetJobPeer::EXPIRES_AT, time(), Criteria::GREATER_THAN);
+    //$this->JobeetJobs = JobeetJobPeer::doSelect($criteria);
+
+    $this->jobeet_jobs = JobeetJobPeer::getActiveJobs();
   }
 
   public function executeShow(sfWebRequest $request)
   {
-    //$this->job = JobeetJobPeer::retrieveByPk($request->getParameter('id'));
     $this->job = $this->getRoute()->getObject();
+    // note: 例外は、sfRouteにてThrowするので、以下は不要
     //$this->forward404Unless($this->job);
   }
 

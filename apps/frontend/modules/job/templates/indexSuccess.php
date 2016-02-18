@@ -23,48 +23,48 @@
     </tr>
   </thead>
   <tbody>
-    <?php foreach ($JobeetJobs as $JobeetJob): ?>
+    <?php foreach ($jobeet_jobs as $jobeet_job): ?>
     <tr>
       <td>
-            <a href="<?php echo url_for('job/show?id='.$JobeetJob->getId()) ?>">
-                <?php echo $JobeetJob->getId() ?>
+            <a href="<?php echo url_for('job/show?id='.$jobeet_job->getId()) ?>">
+                <?php echo $jobeet_job->getId() ?>
             </a>
             <br />
             <a href="<?php echo url_for([
                 'module'   => 'job',
                 'action'   => 'show',
-                'id'       => $JobeetJob->getId(),
-                'company'  => $JobeetJob->getCompany(),
-                'location' => $JobeetJob->getLocation(),
-                'position' => $JobeetJob->getPosition(),
+                'id'       => $jobeet_job->getId(),
+                'company'  => $jobeet_job->getCompany(),
+                'location' => $jobeet_job->getLocation(),
+                'position' => $jobeet_job->getPosition(),
             ]) ?>">
-                <?php echo $JobeetJob->getId() ?>
+                <?php echo $jobeet_job->getId() ?>
             </a>
             <br />
             <a href="<?php echo url_for([
                 'sf_route' => 'job_show_user',
-                'sf_subject' => $JobeetJob,
+                'sf_subject' => $jobeet_job,
             ]) ?>">
-                <?php echo $JobeetJob->getId() ?>
+                <?php echo $jobeet_job->getId() ?>
             </a>
 
       </td>
-      <td><?php echo $JobeetJob->getCategoryId() ?></td>
-      <td><?php echo $JobeetJob->getType() ?></td>
-      <td><?php echo $JobeetJob->getCompany() ?></td>
-      <td><?php echo $JobeetJob->getLogo() ?></td>
-      <td><?php echo $JobeetJob->getUrl() ?></td>
-      <td><?php echo $JobeetJob->getPosition() ?></td>
-      <td><?php echo $JobeetJob->getLocation() ?></td>
-      <td><?php echo $JobeetJob->getDescription() ?></td>
-      <td><?php echo $JobeetJob->getHowToApply() ?></td>
-      <td><?php echo $JobeetJob->getToken() ?></td>
-      <td><?php echo $JobeetJob->getIsPublic() ?></td>
-      <td><?php echo $JobeetJob->getIsActivated() ?></td>
-      <td><?php echo $JobeetJob->getEmail() ?></td>
-      <td><?php echo $JobeetJob->getExpiresAt() ?></td>
-      <td><?php echo $JobeetJob->getCreatedAt() ?></td>
-      <td><?php echo $JobeetJob->getUpdatedAt() ?></td>
+      <td><?php echo $jobeet_job->getCategoryId() ?></td>
+      <td><?php echo $jobeet_job->getType() ?></td>
+      <td><?php echo $jobeet_job->getCompany() ?></td>
+      <td><?php echo $jobeet_job->getLogo() ?></td>
+      <td><?php echo $jobeet_job->getUrl() ?></td>
+      <td><?php echo $jobeet_job->getPosition() ?></td>
+      <td><?php echo $jobeet_job->getLocation() ?></td>
+      <td><?php echo $jobeet_job->getDescription() ?></td>
+      <td><?php echo $jobeet_job->getHowToApply() ?></td>
+      <td><?php echo $jobeet_job->getToken() ?></td>
+      <td><?php echo $jobeet_job->getIsPublic() ?></td>
+      <td><?php echo $jobeet_job->getIsActivated() ?></td>
+      <td><?php echo $jobeet_job->getEmail() ?></td>
+      <td><?php echo $jobeet_job->getExpiresAt() ?></td>
+      <td><?php echo $jobeet_job->getCreatedAt() ?></td>
+      <td><?php echo $jobeet_job->getUpdatedAt() ?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>
