@@ -10,8 +10,10 @@ CREATE TABLE "jobeet_category"
 (
 	"id" serial  NOT NULL,
 	"name" VARCHAR(255)  NOT NULL,
+	"slug" VARCHAR(255)  NOT NULL,
 	PRIMARY KEY ("id"),
-	CONSTRAINT "jobeet_category_U_1" UNIQUE ("name")
+	CONSTRAINT "jobeet_category_U_1" UNIQUE ("name"),
+	CONSTRAINT "jobeet_category_U_2" UNIQUE ("slug")
 );
 
 COMMENT ON TABLE "jobeet_category" IS '';
